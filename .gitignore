@@ -1,0 +1,15 @@
+# Arquivos de dados (gerados pelos scripts)
+data/*.csv
+
+# Configurações locais do VSCode
+.vscode/
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambiente virtual
+venv/
+.env/
