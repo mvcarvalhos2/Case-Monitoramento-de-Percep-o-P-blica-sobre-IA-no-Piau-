@@ -47,7 +47,9 @@ Isso cria o arquivo:
 data/noticias_processadas.csv
 
 3 - Rodar o dashboard
-streamlit run dashboard.py
+streamlit run dashboard.py 
+ou
+python -m streamlit run projeto/dashboard.py 
 
 Abra o link no navegador que aparecer no terminal (geralmente http://localhost:8501).
 
