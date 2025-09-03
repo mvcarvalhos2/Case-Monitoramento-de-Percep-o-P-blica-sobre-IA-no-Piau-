@@ -25,8 +25,6 @@ pip install -r requirements.txt
 
 Dependências usadas
 O arquivo requirements.txt contém:
-nginx
-Copiar código
 requests
 pandas
 matplotlib
