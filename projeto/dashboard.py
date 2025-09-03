@@ -3,8 +3,69 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
-def dashboard():
+def dashboard() -> None:
+    
     st.title("Monitoramento de IA no Piauí 📰🤖")
+
+    #Cria a interface gráfica do monitoramento de notícias.
+    st.markdown(
+        """
+        <style>
+        /* Fundo com gradiente */
+        .stApp {
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: #f5f6fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Títulos */
+        h1, h2, h3, h4 {
+            color: #f5f6fa;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* DataFrame estilizado */
+        .stDataFrame {
+            border: 1px solid #444;
+            border-radius: 12px;
+            background-color: #2c2c34;
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.4);
+        }
+
+        /* Texto da tabela */
+        .stDataFrame table {
+            color: #f5f6fa;
+            font-size: 14px;
+        }
+
+        /* Subtítulos */
+        .css-10trblm, .css-16idsys, .css-1d391kg {
+            color: #f5f6fa !important;
+        }
+
+        /* Aviso final */
+        .stCaption {
+            font-size: 0.9em;
+            color: #dcdde1;
+            font-style: italic;
+        }
+
+        /* Botões (quando usar) */
+        button {
+            background-color: #353b48 !important;
+            color: #f5f6fa !important;
+            border-radius: 8px !important;
+            border: none !important;
+            padding: 8px 16px !important;
+        }
+        button:hover {
+            background-color: #40739e !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
     try:
         df = pd.read_csv("data/noticias_processadas.csv")
